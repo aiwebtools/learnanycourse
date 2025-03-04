@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { cn } from '@/lib/utils';
 import AnimatedSection from './AnimatedSection';
@@ -44,11 +45,12 @@ const HowItWorks: React.FC = () => {
       <div className="fixed bottom-8 right-8 z-50">
         <AnimatedSection animation="scale-in" delay={0.1}>
           <Button 
-            className="rounded-full w-16 h-16 bg-blue-500 hover:bg-blue-600 flex items-center justify-center p-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
+            className="rounded-full w-24 h-24 bg-blue-500 hover:bg-blue-600 flex flex-col items-center justify-center p-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
             onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}
             aria-label="Try Learn Any Skill GPT"
           >
-            <ArrowRight className="h-6 w-6 text-white" />
+            <ArrowRight className="h-6 w-6 text-white mb-1" />
+            <span className="text-white text-xs font-semibold leading-tight">TRY LEARN<br />ANY SKILL<br />GPT</span>
           </Button>
         </AnimatedSection>
       </div>
