@@ -52,6 +52,19 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  // Close menu when window is resized to desktop size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+        document.body.classList.remove('menu-open');
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [mobileMenuOpen]);
+
   return (
     <div className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', isScrolled ? 'py-1' : 'py-2')}>
       <GlassMorphism intensity={isScrolled ? 'high' : 'low'} className={cn('mx-2 sm:mx-4 lg:mx-6 transition-all duration-300', isScrolled && 'shadow-lg')}>
@@ -89,6 +102,7 @@ const Navbar: React.FC = () => {
               className="md:hidden p-2 rounded-md ml-2 mobile-menu-button mobile-touch-target"
               onClick={toggleMobileMenu}
               aria-label="Toggle mobile menu"
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="h-6 w-6 text-gray-900 dark:text-white" /> : <Menu className="h-6 w-6 text-gray-900 dark:text-white" />}
             </button>
