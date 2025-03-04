@@ -39,11 +39,12 @@ const Step: React.FC<StepProps> = ({
 
 const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-24 relative overflow-hidden bg-gray-800">
+    <section id="how-it-works" className="py-20 relative overflow-hidden bg-gray-800">
       <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
       
       <div className="section-container relative z-10">
-        <div className="flex justify-center mb-6">
+        {/* Moved the circular button up and outside of the main flow */}
+        <div className="flex justify-center -mt-16 mb-2">
           <AnimatedSection animation="scale-in" delay={0.1}>
             <Button 
               className="rounded-full w-16 h-16 bg-primary hover:bg-primary/90 flex items-center justify-center p-0 shadow-lg hover:shadow-xl hover:scale-105 transition-all"
@@ -56,7 +57,7 @@ const HowItWorks: React.FC = () => {
           </AnimatedSection>
         </div>
         
-        <AnimatedSection animation="fade-in" className="mb-8">
+        <AnimatedSection animation="fade-in" className="mb-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100/20 border border-yellow-300/30 rounded-lg p-5 backdrop-blur-sm">
               <h3 className="text-lg font-semibold mb-2 text-yellow-300">Learn Anything, Anywhere</h3>

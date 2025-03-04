@@ -1,4 +1,3 @@
-
 #root {
   width: 100%;
   max-width: 100%;
@@ -73,6 +72,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  /* Adjust HowItWorks section spacing for mobile */
+  #how-it-works .flex.-mt-16 {
+    margin-top: -8px;
   }
 }
 
