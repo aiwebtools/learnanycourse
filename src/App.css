@@ -1,3 +1,4 @@
+
 #root {
   width: 100%;
   max-width: 100%;
@@ -74,9 +75,14 @@
     justify-content: center;
   }
   
-  /* Adjust HowItWorks section spacing for mobile */
-  #how-it-works .flex.-mt-16 {
-    margin-top: -8px;
+  /* Adjust HowItWorks section for mobile */
+  #how-it-works .absolute.-top-24 {
+    top: -16px;
+  }
+  
+  /* Adjust how deep the button intrudes into previous section on mobile */
+  #how-it-works {
+    margin-top: 60px;
   }
 }
 
