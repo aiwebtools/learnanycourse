@@ -19,9 +19,13 @@ const CourseExample: React.FC = () => {
         
         <AnimatedSection>
           <div className="max-w-4xl mx-auto">
-            <GlassMorphism className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to master a new skill?</h3>
-              <p className="mb-6">Our AI teacher is available 24/7 to guide you through any learning journey.</p>
+            <GlassMorphism 
+              variant="dark" 
+              intensity="high" 
+              className="p-8 text-center text-white"
+            >
+              <h3 className="text-2xl font-bold mb-4 text-white">Ready to master a new skill?</h3>
+              <p className="mb-6 text-gray-300">Our AI teacher is available 24/7 to guide you through any learning journey.</p>
               <Button 
                 size="lg" 
                 className="rounded-full px-8 py-6 text-base font-semibold bg-primary text-white hover:bg-primary/90"
