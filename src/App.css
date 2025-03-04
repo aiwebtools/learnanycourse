@@ -74,9 +74,36 @@
     align-items: center;
     justify-content: center;
   }
+  
+  /* Optimize mobile navigation */
+  .nav-menu-mobile {
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Reduce animation weight on mobile */
+  .animate-float {
+    animation-duration: 10s;
+  }
+  
+  /* Optimized background for mobile */
+  .starry-background {
+    background-size: 300px 300px;
+  }
 }
 
 /* Fast-click for mobile */
 * {
   touch-action: manipulation;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
