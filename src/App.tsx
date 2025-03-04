@@ -33,8 +33,16 @@ const FacebookCompatibilityProvider = ({ children }: { children: React.ReactNode
       `;
       document.head.appendChild(style);
       
-      return () => document.head.removeChild(style);
+      // Return cleanup function that properly removes the style element
+      return () => {
+        if (style && style.parentNode) {
+          style.parentNode.removeChild(style);
+        }
+      };
     }
+    
+    // Return empty cleanup function for non-Facebook browsers
+    return () => {};
   }, []);
   
   return <>{children}</>;
