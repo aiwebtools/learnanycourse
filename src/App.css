@@ -80,6 +80,12 @@
     max-height: calc(100vh - 80px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    background-color: rgba(18, 22, 30, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 100;
   }
   
   /* Reduce animation weight on mobile */
@@ -90,6 +96,12 @@
   /* Optimized background for mobile */
   .starry-background {
     background-size: 300px 300px;
+  }
+  
+  /* Fix mobile menu button */
+  .mobile-menu-button {
+    z-index: 101;
+    position: relative;
   }
 }
 

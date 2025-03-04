@@ -97,7 +97,10 @@ const Navbar: React.FC = () => {
             </div>
             <button 
               className="md:hidden p-2 rounded-md ml-2 mobile-menu-button"
-              onClick={toggleMobileMenu}
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent event bubbling
+                toggleMobileMenu();
+              }}
               aria-label="Toggle mobile menu"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
@@ -113,6 +116,7 @@ const Navbar: React.FC = () => {
             id="mobile-menu"
             className="md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile"
             aria-label="Mobile navigation menu"
+            onClick={(e) => e.stopPropagation()} // Prevent clicks inside from closing the menu
           >
             <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" 
               className="block py-2 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target">
