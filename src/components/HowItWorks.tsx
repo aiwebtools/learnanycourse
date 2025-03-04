@@ -41,7 +41,7 @@ const HowItWorks: React.FC = () => {
       <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
       
       <div className="section-container relative z-10">
-        <AnimatedSection animation="fade-in" className="mb-16">
+        <AnimatedSection animation="fade-in" className="mb-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100/20 border border-yellow-300/30 rounded-lg p-5 backdrop-blur-sm">
               <h3 className="text-lg font-semibold mb-2 text-yellow-300">Learn Anything, Anywhere</h3>
