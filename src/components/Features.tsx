@@ -31,16 +31,16 @@ const Features: React.FC = () => {
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
           <span className="chip mb-3">Features</span>
-          <h2 className="heading text-3xl md:text-4xl mb-4 text-white">Your Complete Educational Experience</h2>
+          <h2 className="heading text-3xl md:text-4xl mb-4 text-white">Your Complete Skill Learning Experience</h2>
           <p className="subheading mx-auto text-gray-200">
-            College Degree GPT delivers a comprehensive college education experience with personalized, detailed instruction on any subject.
+            Learn Any Skill GPT delivers comprehensive, personalized instruction combined with curated resources to help you master any skill.
           </p>
         </AnimatedSection>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           <Feature 
-            title="Complete Course Structure" 
-            description="Meticulously organized courses by academic year and semester, following actual college curricula."
+            title="Comprehensive Skill Outlines" 
+            description="Meticulously structured learning paths taking you from absolute beginner to expert level mastery."
             delay={0.1}
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
@@ -56,8 +56,8 @@ const Features: React.FC = () => {
           />
           
           <Feature 
-            title="Comprehensive Lesson Plans" 
-            description="Detailed outlines for each course with clear learning objectives and sequenced content modules."
+            title="Step-by-Step Instruction" 
+            description="Detailed lessons break down complex skills into manageable steps with clear explanations and examples."
             delay={0.2}
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
@@ -71,8 +71,8 @@ const Features: React.FC = () => {
           />
           
           <Feature 
-            title="Professional Teaching Style" 
-            description="Learn from an AI that teaches with clarity, compassion, and the explanatory skill of a college professor."
+            title="Expert Teaching Style" 
+            description="Learn with clear, comprehensive explanations designed for maximum understanding and retention."
             delay={0.3}
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
@@ -85,9 +85,21 @@ const Features: React.FC = () => {
           />
           
           <Feature 
-            title="Sequential Learning Path" 
-            description="Courses are taught lesson by lesson in a logical progression to build knowledge systematically."
+            title="Curated YouTube Videos" 
+            description="Each lesson includes hand-picked YouTube tutorials to enhance your learning with visual demonstrations."
             delay={0.4}
+            icon={
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
+                <path d="M15.5 7H13.5L12 5.5L10.5 7H8.5C7.95 7 7.5 7.45 7.5 8V16C7.5 16.55 7.95 17 8.5 17H15.5C16.05 17 16.5 16.55 16.5 16V8C16.5 7.45 16.05 7 15.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M10 14V10L14 12L10 14Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            }
+          />
+          
+          <Feature 
+            title="Sequential Learning Path" 
+            description="Progress through lessons in a logical order, building your skills progressively from foundations to advanced techniques."
+            delay={0.5}
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
                 <path d="M8 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -101,20 +113,8 @@ const Features: React.FC = () => {
           />
           
           <Feature 
-            title="Rich Multimedia Content" 
-            description="Enhanced learning with curated YouTube video recommendations and visual summaries for each segment."
-            delay={0.5}
-            icon={
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
-                <path d="M15.5 7H13.5L12 5.5L10.5 7H8.5C7.95 7 7.5 7.45 7.5 8V16C7.5 16.55 7.95 17 8.5 17H15.5C16.05 17 16.5 16.55 16.5 16V8C16.5 7.45 16.05 7 15.5 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M10 14V10L14 12L10 14Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            }
-          />
-          
-          <Feature 
-            title="Real-World Applications" 
-            description="Concepts are linked to practical applications and scenarios to deepen understanding and relevance."
+            title="Visual Learning Aids" 
+            description="Enhance your understanding with web-searched images and diagrams that illustrate key concepts and techniques."
             delay={0.6}
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">

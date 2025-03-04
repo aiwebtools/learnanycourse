@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
                 <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <span className="font-bold tracking-tight">College Degree GPT</span>
+              <span className="font-bold tracking-tight">Learn Any Skill GPT</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Your personal AI professor, offering comprehensive college education on any subject.
+              Your personal AI tutor, offering comprehensive step-by-step guidance to master any skill from beginner to expert.
             </p>
           </div>
           
@@ -78,4 +78,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

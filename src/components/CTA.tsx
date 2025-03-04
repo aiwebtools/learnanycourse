@@ -26,17 +26,17 @@ const CTA: React.FC = () => {
           <GlassMorphism className="px-6 py-12 md:py-16">
             <span className="chip mb-6">Ready to Start Learning?</span>
             <h2 className="heading text-3xl md:text-4xl lg:text-5xl mb-6 text-gray-900">
-              Begin Your Educational Journey Today
+              Master Any Skill With AI-Guided Learning
             </h2>
             <p className="text-lg mx-auto mb-8 max-w-2xl text-gray-800 font-medium">
-              Access comprehensive college-level education on any subject, on your schedule, with personalized instruction from College Degree GPT.
+              Whether you want to learn photography, coding, cooking, or any other skill, Learn Any Skill GPT provides personalized instruction with curated YouTube videos and visual aids.
             </p>
             
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
               <Button 
                 size="lg" 
                 className="rounded-full px-8 py-6 text-base w-full md:w-auto"
-                onClick={() => window.open('https://chatgpt.com/g/g-zF3j9G3Wd-college-degree-gpt', '_blank')}
+                onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}
               >
                 Start Learning Now
               </Button>

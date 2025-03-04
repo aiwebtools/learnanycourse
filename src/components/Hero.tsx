@@ -21,15 +21,15 @@ const Hero: React.FC = () => {
       
       <div className="section-container relative z-10 flex flex-col items-center justify-center">
         <AnimatedSection animation="fade-in-down" className="mb-6">
-          <span className="chip bg-white/20 text-white font-medium">Your Personal College Educator</span>
+          <span className="chip bg-white/20 text-white font-medium">Your Personal Skill Educator</span>
         </AnimatedSection>
         
         <AnimatedSection animation="fade-in" className="text-center mb-6">
           <h1 className="heading text-4xl md:text-6xl lg:text-7xl mb-6 max-w-4xl font-bold text-white drop-shadow-md">
-            Experience a Complete College Education, Powered by AI
+            Master Any Skill from Beginner to Expert
           </h1>
           <p className="subheading text-lg md:text-xl max-w-2xl mx-auto text-white bg-black/30 backdrop-blur-sm p-4 rounded-lg">
-            Comprehensive courses on any subject, taught step-by-step with the personalized attention of a dedicated professor.
+            Learn step-by-step with personalized instruction, detailed explanations, and curated YouTube videos - all in one place.
           </p>
         </AnimatedSection>
         
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
             className="rounded-full px-8 py-6 text-base font-semibold bg-white text-slate-900 hover:bg-white/90"
             asChild
           >
-            <a href="https://chatgpt.com/g/g-zF3j9G3Wd-college-degree-gpt" target="_blank" rel="noopener noreferrer">
+            <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
               Start Learning Now
             </a>
           </Button>
@@ -87,15 +87,15 @@ const Hero: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white pointer-events-none">
-                    <h3 className="text-xl font-bold">See How College Degree GPT Works</h3>
-                    <p className="text-white font-medium">Your personalized educational journey starts here</p>
+                    <h3 className="text-xl font-bold">See How Learn Any Skill GPT Works</h3>
+                    <p className="text-white font-medium">Your guided journey to mastery starts here</p>
                   </div>
                 </div>
               ) : (
                 <iframe 
                   src="https://www.youtube.com/embed/5cqDDGt1yn8?autoplay=1" 
                   className="w-full h-full aspect-video"
-                  title="College Degree GPT Tutorial"
+                  title="Learn Any Skill GPT Tutorial"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowFullScreen
