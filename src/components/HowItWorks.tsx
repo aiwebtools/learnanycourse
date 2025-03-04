@@ -3,7 +3,6 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import AnimatedSection from './AnimatedSection';
 import GlassMorphism from './ui/GlassMorphism';
-import { Button } from './ui/button';
 
 interface StepProps {
   number: number;
@@ -38,11 +37,11 @@ const Step: React.FC<StepProps> = ({
 
 const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="py-16 relative overflow-hidden bg-gray-800">
+    <section id="how-it-works" className="py-24 relative overflow-hidden bg-gray-800">
       <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
       
       <div className="section-container relative z-10">
-        <AnimatedSection animation="fade-in" className="mb-6 pt-6">
+        <AnimatedSection animation="fade-in" className="mb-16">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100/20 border border-yellow-300/30 rounded-lg p-5 backdrop-blur-sm">
               <h3 className="text-lg font-semibold mb-2 text-yellow-300">Learn Anything, Anywhere</h3>
@@ -123,9 +122,9 @@ const HowItWorks: React.FC = () => {
                   <button className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
                     Previous Lesson
                   </button>
-                  <Button className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors" onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}>
+                  <button className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors" onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}>
                     Access Learn Any Skill GPT
-                  </Button>
+                  </button>
                 </div>
               </div>
             </GlassMorphism>

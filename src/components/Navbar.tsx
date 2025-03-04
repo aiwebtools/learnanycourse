@@ -19,12 +19,8 @@ const Navbar: React.FC = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    // Toggle body class to prevent scrolling when menu is open
-    if (!mobileMenuOpen) {
-      document.body.classList.add('menu-open');
-    } else {
-      document.body.classList.remove('menu-open');
-    }
+    // Prevent body scrolling when mobile menu is open
+    document.body.style.overflow = mobileMenuOpen ? 'auto' : 'hidden';
   };
 
   // Close mobile menu when clicking outside
@@ -33,37 +29,25 @@ const Navbar: React.FC = () => {
       const target = e.target as HTMLElement;
       if (mobileMenuOpen && !target.closest('.mobile-menu-container') && !target.closest('.mobile-menu-button')) {
         setMobileMenuOpen(false);
-        document.body.classList.remove('menu-open');
+        document.body.style.overflow = 'auto';
       }
     };
 
     document.addEventListener('click', handleClickOutside);
     return () => {
       document.removeEventListener('click', handleClickOutside);
-      // Reset body class when component unmounts
-      document.body.classList.remove('menu-open');
+      // Reset overflow when component unmounts
+      document.body.style.overflow = 'auto';
     };
   }, [mobileMenuOpen]);
 
-  // Cleanup on unmount
+  // Apply body overflow style based on mobile menu state
   useEffect(() => {
     return () => {
-      document.body.classList.remove('menu-open');
+      // Clean up overflow style on unmount
+      document.body.style.overflow = 'auto';
     };
   }, []);
-
-  // Close menu when window is resized to desktop size
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768 && mobileMenuOpen) {
-        setMobileMenuOpen(false);
-        document.body.classList.remove('menu-open');
-      }
-    };
-    
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [mobileMenuOpen]);
 
   return (
     <div className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', isScrolled ? 'py-1' : 'py-2')}>
@@ -99,42 +83,39 @@ const Navbar: React.FC = () => {
               </Button>
             </div>
             <button 
-              className="md:hidden p-2 rounded-md ml-2 mobile-menu-button mobile-touch-target"
+              className="md:hidden p-2 rounded-md ml-2 mobile-menu-button"
               onClick={toggleMobileMenu}
               aria-label="Toggle mobile menu"
-              aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="h-6 w-6 text-gray-900 dark:text-white" /> : <Menu className="h-6 w-6 text-gray-900 dark:text-white" />}
+              {mobileMenuOpen ? <X className="h-5 w-5 text-gray-900 dark:text-white" /> : <Menu className="h-5 w-5 text-gray-900 dark:text-white" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden px-4 py-3 space-y-3 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile bg-white dark:bg-gray-800">
+          <div className="md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile">
             <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" 
-              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mobile-touch-target">
+              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
               Learn Any Skill GPT
             </a>
             <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" 
-              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mobile-touch-target">
+              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
               Learn Any Course GPT
             </a>
             <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mobile-touch-target">
+              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
               College Degree GPT
             </a>
             <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mobile-touch-target">
+              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
               Talk to History GPT
             </a>
-            <div className="pt-2">
-              <Button size="sm" className="w-full rounded-full py-2 h-10" asChild>
-                <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
-                  Get Started
-                </a>
-              </Button>
-            </div>
+            <Button size="sm" className="w-full rounded-full mt-2 py-1 h-9" asChild>
+              <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
+                Get Started
+              </a>
+            </Button>
           </div>
         )}
       </GlassMorphism>
