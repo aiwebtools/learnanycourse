@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="section-container py-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center space-x-2 mb-2">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-primary">
                 <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -16,6 +16,14 @@ const Footer: React.FC = () => {
               </svg>
               <span className="font-bold tracking-tight">Learn Any Skill GPT</span>
             </div>
+            <a 
+              href="https://www.aiwebtools.ai" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block mb-4 text-sm text-primary hover:text-primary/90 transition-colors font-medium"
+            >
+              Presented By AiWebTools.Ai
+            </a>
             <p className="text-sm text-muted-foreground">
               Your personal AI tutor, offering comprehensive step-by-step guidance to master any skill from beginner to expert.
             </p>
