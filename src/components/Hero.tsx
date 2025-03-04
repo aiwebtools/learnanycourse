@@ -1,15 +1,17 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import GlassMorphism from './ui/GlassMorphism';
 import AnimatedSection from './AnimatedSection';
 
 const Hero: React.FC = () => {
-  const [videoPlaying, setVideoPlaying] = useState(false);
+  // Start with video automatically playing
+  const [videoPlaying, setVideoPlaying] = useState(true);
   
-  const handlePlayVideo = () => {
+  // Auto-play video when component mounts
+  useEffect(() => {
     setVideoPlaying(true);
-  };
+  }, []);
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-starry-night py-16 md:py-20">
@@ -56,51 +58,16 @@ const Hero: React.FC = () => {
         <AnimatedSection animation="fade-in-up" delay={0.4} className="mt-16 w-full max-w-5xl">
           <GlassMorphism className="p-2 md:p-4 overflow-hidden rounded-2xl bg-black/50 border-white/20">
             <div className="relative rounded-xl overflow-hidden bg-slate-900 aspect-video w-full">
-              {!videoPlaying ? (
-                <div className="relative aspect-video w-full">
-                  <img 
-                    src="https://img.youtube.com/vi/q1AY2LukHrk/maxresdefault.jpg" 
-                    alt="Video thumbnail" 
-                    className="w-full h-full object-cover"
-                  />
-                  <button 
-                    className="absolute inset-0 flex items-center justify-center cursor-pointer w-full h-full"
-                    onClick={handlePlayVideo}
-                    aria-label="Play video"
-                  >
-                    <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center hover:bg-white/90 transition-colors duration-300">
-                      <svg 
-                        width="28" 
-                        height="28" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="text-slate-900 ml-1"
-                      >
-                        <path 
-                          d="M5 3L19 12L5 21V3Z" 
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                  </button>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white pointer-events-none">
-                    <h3 className="text-xl font-bold">See How Learn Any Skill GPT Works</h3>
-                    <p className="text-white font-medium">Your guided journey to mastery starts here</p>
-                  </div>
-                </div>
-              ) : (
-                <iframe 
-                  src="https://www.youtube.com/embed/q1AY2LukHrk?autoplay=1" 
-                  className="w-full h-full aspect-video"
-                  title="Learn Any Skill GPT Tutorial"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                ></iframe>
-              )}
+              {/* Embed YouTube with autoplay, unmuted, 1080p quality, and preload for faster loading */}
+              <iframe 
+                src="https://www.youtube.com/embed/q1AY2LukHrk?autoplay=1&mute=0&vq=hd1080&rel=0&modestbranding=1" 
+                className="w-full h-full aspect-video"
+                title="Learn Any Skill GPT Tutorial"
+                frameBorder="0"
+                loading="eager"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
             </div>
           </GlassMorphism>
         </AnimatedSection>

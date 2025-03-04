@@ -11,6 +11,17 @@ import Footer from '@/components/Footer';
 const Index = () => {
   // Ensure smooth scrolling for anchor links
   useEffect(() => {
+    // Preload the video content
+    const preloadVideo = () => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = 'https://www.youtube.com/embed/q1AY2LukHrk?autoplay=1&mute=0&vq=hd1080';
+      link.as = 'iframe';
+      document.head.appendChild(link);
+    };
+    
+    preloadVideo();
+    
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a');
