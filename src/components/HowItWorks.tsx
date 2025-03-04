@@ -4,7 +4,6 @@ import { cn } from '@/lib/utils';
 import AnimatedSection from './AnimatedSection';
 import GlassMorphism from './ui/GlassMorphism';
 import { Button } from './ui/button';
-import { ArrowRight } from 'lucide-react';
 
 interface StepProps {
   number: number;
@@ -41,19 +40,6 @@ const HowItWorks: React.FC = () => {
   return (
     <section id="how-it-works" className="py-16 relative overflow-hidden bg-gray-800">
       <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
-      
-      <div className="fixed bottom-8 right-8 z-50">
-        <AnimatedSection animation="scale-in" delay={0.1}>
-          <Button 
-            className="rounded-full w-24 h-24 bg-blue-500 hover:bg-blue-600 flex flex-col items-center justify-center p-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
-            onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}
-            aria-label="Try Learn Any Skill GPT"
-          >
-            <ArrowRight className="h-6 w-6 text-white mb-1" />
-            <span className="text-white text-xs font-semibold leading-tight">TRY LEARN<br />ANY SKILL<br />GPT</span>
-          </Button>
-        </AnimatedSection>
-      </div>
       
       <div className="section-container relative z-10">
         <AnimatedSection animation="fade-in" className="mb-6 pt-6">
@@ -137,9 +123,9 @@ const HowItWorks: React.FC = () => {
                   <button className="text-sm text-gray-700 hover:text-gray-900 transition-colors">
                     Previous Lesson
                   </button>
-                  <button className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors" onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}>
+                  <Button className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition-colors" onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}>
                     Access Learn Any Skill GPT
-                  </button>
+                  </Button>
                 </div>
               </div>
             </GlassMorphism>

@@ -19,8 +19,12 @@ const Navbar: React.FC = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    // Prevent body scrolling when mobile menu is open
-    document.body.style.overflow = mobileMenuOpen ? 'auto' : 'hidden';
+    // Toggle body class to prevent scrolling when menu is open
+    if (!mobileMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
   };
 
   // Close mobile menu when clicking outside
@@ -29,23 +33,22 @@ const Navbar: React.FC = () => {
       const target = e.target as HTMLElement;
       if (mobileMenuOpen && !target.closest('.mobile-menu-container') && !target.closest('.mobile-menu-button')) {
         setMobileMenuOpen(false);
-        document.body.style.overflow = 'auto';
+        document.body.classList.remove('menu-open');
       }
     };
 
     document.addEventListener('click', handleClickOutside);
     return () => {
       document.removeEventListener('click', handleClickOutside);
-      // Reset overflow when component unmounts
-      document.body.style.overflow = 'auto';
+      // Reset body class when component unmounts
+      document.body.classList.remove('menu-open');
     };
   }, [mobileMenuOpen]);
 
-  // Apply body overflow style based on mobile menu state
+  // Cleanup on unmount
   useEffect(() => {
     return () => {
-      // Clean up overflow style on unmount
-      document.body.style.overflow = 'auto';
+      document.body.classList.remove('menu-open');
     };
   }, []);
 
@@ -87,28 +90,28 @@ const Navbar: React.FC = () => {
               onClick={toggleMobileMenu}
               aria-label="Toggle mobile menu"
             >
-              {mobileMenuOpen ? <X className="h-5 w-5 text-gray-900 dark:text-white" /> : <Menu className="h-5 w-5 text-gray-900 dark:text-white" />}
+              {mobileMenuOpen ? <X className="h-6 w-6 text-gray-900 dark:text-white" /> : <Menu className="h-6 w-6 text-gray-900 dark:text-white" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden px-4 py-3 space-y-3 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile bg-black/10 backdrop-blur-md">
+          <div className="md:hidden px-4 py-3 space-y-3 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile bg-white dark:bg-gray-800">
             <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" 
-              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-black/10 mobile-touch-target">
+              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mobile-touch-target">
               Learn Any Skill GPT
             </a>
             <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" 
-              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-black/10 mobile-touch-target">
+              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mobile-touch-target">
               Learn Any Course GPT
             </a>
             <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-black/10 mobile-touch-target">
+              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mobile-touch-target">
               College Degree GPT
             </a>
             <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-black/10 mobile-touch-target">
+              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mobile-touch-target">
               Talk to History GPT
             </a>
             <div className="pt-2">
