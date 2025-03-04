@@ -3,18 +3,9 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import AnimatedSection from './AnimatedSection';
 import GlassMorphism from './ui/GlassMorphism';
-import { Play } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const CourseExample: React.FC = () => {
-  const [showVideo, setShowVideo] = React.useState(false);
-
-  // Fixed PlayButton component that returns JSX
-  const PlayButton = () => {
-    return <Button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full w-16 h-16 flex items-center justify-center bg-primary/90 hover:bg-primary transition-all shadow-xl" onClick={() => setShowVideo(true)}>
-        <Play className="text-white ml-1" />
-      </Button>;
-  };
-
   return <section id="example" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent"></div>
       <div className="section-container relative z-10">
@@ -27,13 +18,20 @@ const CourseExample: React.FC = () => {
         </AnimatedSection>
         
         <AnimatedSection>
-          <div className="max-w-4xl mx-auto relative rounded-2xl overflow-hidden shadow-2xl">
-            {showVideo ? <div className="aspect-video w-full">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/q1AY2LukHrk?autoplay=1" title="Learn Any Skill GPT Demo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className="aspect-video"></iframe>
-              </div> : <div className="relative">
-                <img alt="Course example thumbnail" className="w-full aspect-video object-cover" src="/lovable-uploads/f53ee8e3-2c2a-41e6-975c-30bd30bc7322.png" />
-                <PlayButton />
-              </div>}
+          <div className="max-w-4xl mx-auto">
+            <GlassMorphism className="p-8 text-center">
+              <h3 className="text-2xl font-bold mb-4">Ready to master a new skill?</h3>
+              <p className="mb-6">Our AI teacher is available 24/7 to guide you through any learning journey.</p>
+              <Button 
+                size="lg" 
+                className="rounded-full px-8 py-6 text-base font-semibold bg-primary text-white hover:bg-primary/90"
+                asChild
+              >
+                <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
+                  Start Learning Now <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </GlassMorphism>
           </div>
         </AnimatedSection>
       </div>
