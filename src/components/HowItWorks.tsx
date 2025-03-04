@@ -43,7 +43,7 @@ const HowItWorks: React.FC = () => {
       <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
       
       {/* Positioned button absolutely to overlap with the previous section */}
-      <div className="absolute left-0 right-0 -top-16 flex justify-center z-30">
+      <div className="absolute left-0 right-0 -top-10 flex justify-center z-30">
         <AnimatedSection animation="scale-in" delay={0.1} className="text-center">
           <Button 
             className="rounded-full w-20 h-20 bg-blue-500 hover:bg-blue-600 flex items-center justify-center p-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
@@ -56,7 +56,7 @@ const HowItWorks: React.FC = () => {
         </AnimatedSection>
       </div>
       
-      <div className="section-container relative z-10 mt-16">
+      <div className="section-container relative z-10 mt-12">
         <AnimatedSection animation="fade-in" className="mb-6 pt-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100/20 border border-yellow-300/30 rounded-lg p-5 backdrop-blur-sm">

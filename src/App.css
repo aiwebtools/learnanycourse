@@ -76,13 +76,13 @@
   }
   
   /* Adjust HowItWorks section for mobile */
-  #how-it-works .absolute.-top-16 {
-    top: -12px;
+  #how-it-works .absolute.-top-10 {
+    top: -8px;
   }
   
   /* Adjust how deep the button intrudes into previous section on mobile */
   #how-it-works {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 
