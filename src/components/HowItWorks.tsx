@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 import AnimatedSection from './AnimatedSection';
@@ -42,21 +41,19 @@ const HowItWorks: React.FC = () => {
     <section id="how-it-works" className="py-16 relative overflow-hidden bg-gray-800">
       <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
       
-      {/* Positioned button absolutely to overlap with the previous section */}
-      <div className="absolute left-0 right-0 -top-10 flex justify-center z-30">
-        <AnimatedSection animation="scale-in" delay={0.1} className="text-center">
+      <div className="fixed bottom-8 right-8 z-50">
+        <AnimatedSection animation="scale-in" delay={0.1}>
           <Button 
-            className="rounded-full w-20 h-20 bg-blue-500 hover:bg-blue-600 flex items-center justify-center p-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
+            className="rounded-full w-16 h-16 bg-blue-500 hover:bg-blue-600 flex items-center justify-center p-0 shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
             onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}
+            aria-label="Try Learn Any Skill GPT"
           >
-            <span className="sr-only">Try Learn Any Skill GPT</span>
-            <ArrowRight className="h-8 w-8 text-white" />
+            <ArrowRight className="h-6 w-6 text-white" />
           </Button>
-          <p className="text-white font-semibold mt-3 text-base tracking-wide">TRY LEARN ANY SKILL GPT</p>
         </AnimatedSection>
       </div>
       
-      <div className="section-container relative z-10 mt-12">
+      <div className="section-container relative z-10">
         <AnimatedSection animation="fade-in" className="mb-6 pt-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100/20 border border-yellow-300/30 rounded-lg p-5 backdrop-blur-sm">

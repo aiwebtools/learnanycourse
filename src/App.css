@@ -75,14 +75,10 @@
     justify-content: center;
   }
   
-  /* Adjust HowItWorks section for mobile */
-  #how-it-works .absolute.-top-10 {
-    top: -8px;
-  }
-  
-  /* Adjust how deep the button intrudes into previous section on mobile */
-  #how-it-works {
-    margin-top: 40px;
+  /* Fixed overlay button adjustments for mobile */
+  #how-it-works .fixed.bottom-8.right-8 {
+    bottom: 1rem;
+    right: 1rem;
   }
 }
 
