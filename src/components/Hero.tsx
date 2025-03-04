@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
               {!videoPlaying ? (
                 <div className="relative aspect-video w-full">
                   <img 
-                    src="https://img.youtube.com/vi/5cqDDGt1yn8/maxresdefault.jpg" 
+                    src="https://img.youtube.com/vi/q1AY2LukHrk/maxresdefault.jpg" 
                     alt="Video thumbnail" 
                     className="w-full h-full object-cover"
                   />
@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
                 </div>
               ) : (
                 <iframe 
-                  src="https://www.youtube.com/embed/5cqDDGt1yn8?autoplay=1" 
+                  src="https://www.youtube.com/embed/q1AY2LukHrk?autoplay=1" 
                   className="w-full h-full aspect-video"
                   title="Learn Any Skill GPT Tutorial"
                   frameBorder="0"
