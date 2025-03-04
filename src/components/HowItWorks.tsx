@@ -3,6 +3,8 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import AnimatedSection from './AnimatedSection';
 import GlassMorphism from './ui/GlassMorphism';
+import { Button } from './ui/button';
+import { ArrowRight } from 'lucide-react';
 
 interface StepProps {
   number: number;
@@ -41,6 +43,19 @@ const HowItWorks: React.FC = () => {
       <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
       
       <div className="section-container relative z-10">
+        <div className="flex justify-center mb-6">
+          <AnimatedSection animation="scale-in" delay={0.1}>
+            <Button 
+              className="rounded-full w-16 h-16 bg-primary hover:bg-primary/90 flex items-center justify-center p-0 shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+              onClick={() => window.open('https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt', '_blank')}
+            >
+              <span className="sr-only">Try Learn Any Skill GPT</span>
+              <ArrowRight className="h-7 w-7" />
+            </Button>
+            <p className="text-white font-medium mt-2 text-sm">TRY LEARN ANY SKILL GPT</p>
+          </AnimatedSection>
+        </div>
+        
         <AnimatedSection animation="fade-in" className="mb-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100/20 border border-yellow-300/30 rounded-lg p-5 backdrop-blur-sm">
