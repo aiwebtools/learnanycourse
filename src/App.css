@@ -1,8 +1,18 @@
+
 #root {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1280px) {
+  #root {
+    max-width: 1280px;
+    padding: 0 1rem;
+  }
 }
 
 .logo {
@@ -39,4 +49,34 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Improve touch targets on mobile */
+  button, 
+  a, 
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Fix button and anchor positioning for better touch */
+  .mobile-touch-target {
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Fast-click for mobile */
+* {
+  touch-action: manipulation;
 }
