@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                 <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              <span className="font-bold tracking-tight">Learn Any Skill GPT</span>
+              <span className="font-bold tracking-tight">Learn Any Course GPT</span>
             </div>
             <a 
               href="https://www.aiwebtools.ai" 
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               Presented By AiWebTools.Ai
             </a>
             <p className="text-sm text-muted-foreground">
-              Your personal AI tutor, offering comprehensive step-by-step guidance to master any skill from beginner to expert.
+              Your personal AI tutor, offering comprehensive step-by-step guidance to master any course from beginner to expert.
             </p>
           </div>
           
@@ -36,10 +36,10 @@ const Footer: React.FC = () => {
                 <a href="https://docs.google.com/document/d/1TpVG9pncULpkHy9IhAjyXIgScyTW703Lf-IQKkXeJs4/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Open Source College Degree GPT Prompt</a>
               </li>
               <li>
-                <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Skill GPT</a>
+                <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Course GPT</a>
               </li>
               <li>
-                <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Course GPT</a>
+                <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Skill GPT</a>
               </li>
               <li>
                 <a href="https://docs.google.com/document/d/1qtDKo3XN_EsspgrQD72Cpq2qh83H5xSd/edit?usp=sharing&ouid=116187507271950139405&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Ai Tools Free Downloadable List</a>

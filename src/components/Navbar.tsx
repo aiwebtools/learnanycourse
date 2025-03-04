@@ -60,15 +60,15 @@ const Navbar: React.FC = () => {
               <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <div className="flex flex-col">
-              <span className="font-bold text-base sm:text-lg tracking-tight text-gray-900 dark:text-white">Learn Any Skill GPT</span>
+              <span className="font-bold text-base sm:text-lg tracking-tight text-gray-900 dark:text-white">Learn Any Course GPT</span>
               <a href="https://www.AiWebTools.Ai" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-700 dark:text-gray-300 hover:underline">Presented by Ai Web Tools LLC</a>
             </div>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-4">
-            <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">Learn Any Skill GPT</a>
             <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">Learn Any Course GPT</a>
+            <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">Learn Any Skill GPT</a>
             <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">College Degree GPT</a>
             <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">Talk to History GPT</a>
           </nav>
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center ml-auto md:ml-0">
             <div className="hidden md:block">
               <Button size="sm" className="rounded-full px-5 py-1 h-8" asChild>
-                <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
+                <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer">
                   Get Started
                 </a>
               </Button>
@@ -95,13 +95,13 @@ const Navbar: React.FC = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile">
-            <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
-              Learn Any Skill GPT
-            </a>
             <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" 
               className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
               Learn Any Course GPT
+            </a>
+            <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" 
+              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
+              Learn Any Skill GPT
             </a>
             <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
               className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
               Talk to History GPT
             </a>
             <Button size="sm" className="w-full rounded-full mt-2 py-1 h-9" asChild>
-              <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
+              <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer">
                 Get Started
               </a>
             </Button>

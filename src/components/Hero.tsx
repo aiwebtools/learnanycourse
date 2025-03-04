@@ -23,15 +23,15 @@ const Hero: React.FC = () => {
       
       <div className="section-container relative z-10 flex flex-col items-center justify-center">
         <AnimatedSection animation="fade-in-down" className="mb-6">
-          <span className="chip bg-white/20 text-white font-medium">Your Personal Skill Educator</span>
+          <span className="chip bg-white/20 text-white font-medium">Your Personal Course Educator</span>
         </AnimatedSection>
         
         <AnimatedSection animation="fade-in" className="text-center mb-6">
           <h1 className="heading text-4xl md:text-6xl lg:text-7xl mb-6 max-w-4xl font-bold text-white drop-shadow-md">
-            Master Any Skill from Beginner to Expert
+            Master Any Course from Beginner to Expert
           </h1>
           <p className="subheading text-lg md:text-xl max-w-2xl mx-auto text-white bg-black/30 backdrop-blur-sm p-4 rounded-lg">
-            Learn step-by-step with personalized instruction, detailed explanations, and curated YouTube videos - all in one place.
+            Learn any course step-by-step with personalized instruction, detailed explanations, and curated YouTube videos - all in one place.
           </p>
         </AnimatedSection>
         
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
             className="rounded-full px-8 py-6 text-base font-semibold bg-white text-slate-900 hover:bg-white/90"
             asChild
           >
-            <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
+            <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer">
               Start Learning Now
             </a>
           </Button>
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
               <iframe 
                 src="https://www.youtube.com/embed/q1AY2LukHrk?autoplay=1&mute=0&vq=hd1080&rel=0&modestbranding=1" 
                 className="w-full h-full aspect-video"
-                title="Learn Any Skill GPT Tutorial"
+                title="Learn Any Course GPT Tutorial"
                 frameBorder="0"
                 loading="eager"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
