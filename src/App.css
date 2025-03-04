@@ -1,4 +1,3 @@
-
 #root {
   width: 100%;
   max-width: 100%;
@@ -75,10 +74,35 @@
     justify-content: center;
   }
   
+  /* Mobile menu improvements */
+  .mobile-menu-container {
+    width: 100%;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .mobile-menu-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  
+  .nav-menu-mobile a {
+    transition: background-color 0.2s ease;
+  }
+  
   /* Fixed overlay button adjustments for mobile */
   #how-it-works .fixed.bottom-8.right-8 {
     bottom: 1rem;
     right: 1rem;
+  }
+  
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
   }
 }
 

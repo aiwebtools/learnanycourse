@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
               </Button>
             </div>
             <button 
-              className="md:hidden p-2 rounded-md ml-2 mobile-menu-button"
+              className="md:hidden p-2 rounded-md ml-2 mobile-menu-button mobile-touch-target"
               onClick={toggleMobileMenu}
               aria-label="Toggle mobile menu"
             >
@@ -94,28 +94,30 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile">
+          <div className="md:hidden px-4 py-3 space-y-3 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile bg-black/10 backdrop-blur-md">
             <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
+              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-black/10 mobile-touch-target">
               Learn Any Skill GPT
             </a>
             <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
+              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-black/10 mobile-touch-target">
               Learn Any Course GPT
             </a>
             <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
+              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-black/10 mobile-touch-target">
               College Degree GPT
             </a>
             <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white">
+              className="block py-2.5 px-3 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-black/10 mobile-touch-target">
               Talk to History GPT
             </a>
-            <Button size="sm" className="w-full rounded-full mt-2 py-1 h-9" asChild>
-              <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
-                Get Started
-              </a>
-            </Button>
+            <div className="pt-2">
+              <Button size="sm" className="w-full rounded-full py-2 h-10" asChild>
+                <a href="https://chatgpt.com/g/g-677690e9535c81919b3acbd5ec088644-learn-any-skill-gpt" target="_blank" rel="noopener noreferrer">
+                  Get Started
+                </a>
+              </Button>
+            </div>
           </div>
         )}
       </GlassMorphism>
