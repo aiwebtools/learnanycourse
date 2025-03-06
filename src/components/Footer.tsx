@@ -47,6 +47,9 @@ const Footer: React.FC = () => {
               <li>
                 <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">College Degree GPT</a>
               </li>
+              <li>
+                <a href="https://chatgpt.com/g/g-cUahkn19i-quiz-maker-ai" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Quiz Maker GPT</a>
+              </li>
               <li className="pt-2">
                 <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="sm" className="w-full">
@@ -73,6 +76,13 @@ const Footer: React.FC = () => {
               <li>
                 <a href="tel:+14758008096" className="text-muted-foreground hover:text-foreground transition-colors">
                   Contact Our 24/7 Ai Agent
+                </a>
+              </li>
+              <li className="pt-2">
+                <a href="https://chatgpt.com/g/g-cUahkn19i-quiz-maker-ai" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="sm" className="w-full">
+                    QUIZ MAKER GPT
+                  </Button>
                 </a>
               </li>
             </ul>
