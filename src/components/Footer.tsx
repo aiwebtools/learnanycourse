@@ -6,6 +6,13 @@ import { Button } from './ui/button';
 const Footer: React.FC = () => {
   return <footer className="bg-secondary/30 py-12 border-t border-border">
       <div className="section-container py-0">
+        {/* Disclaimer notice */}
+        <div className="text-center mb-8">
+          <p className="text-xs text-muted-foreground italic">
+            Informational, educational, and research purposes only.
+          </p>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-2">
@@ -69,7 +76,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="https://aiwebtools.ai/terms-of-services" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="https://aiwebtools.lovable.app/disclaimers" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                   Terms of Service
                 </a>
               </li>
