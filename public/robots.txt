@@ -1,0 +1,10 @@
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://learn-any-course-gpt.lovable.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
