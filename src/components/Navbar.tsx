@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import GlassMorphism from './ui/GlassMorphism';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ExternalLink } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
