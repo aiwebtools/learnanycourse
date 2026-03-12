@@ -51,10 +51,10 @@ const Hero: React.FC = () => {
           </div>
         </AnimatedSection>
         
-        <AnimatedSection animation="fade-in-up" delay={0.2} className="mt-12 space-x-6">
+        <AnimatedSection animation="fade-in-up" delay={0.2} className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0">
           <Button 
             size="lg" 
-            className="divine-button rounded-full px-12 py-8 text-lg font-bold text-white hover:text-white transition-all duration-300"
+            className="divine-button rounded-full px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg font-bold text-white hover:text-white transition-all duration-200 w-full sm:w-auto"
             asChild
             aria-label="Start learning with free AI tools"
           >
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="rounded-full px-12 py-8 text-lg border-2 border-white/30 text-white hover:bg-white/20 font-bold backdrop-blur-xl transition-all duration-300 hover:scale-105"
+            className="rounded-full px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg border-2 border-white/30 text-white hover:bg-white/20 font-bold backdrop-blur-xl transition-all duration-200 hover:scale-105 w-full sm:w-auto"
             onClick={() => window.open('https://aiwebtools.lovable.app/?via=aiwebtools', '_blank')}
             aria-label="Explore more AI web tools"
           >
