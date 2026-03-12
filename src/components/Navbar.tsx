@@ -112,36 +112,43 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div 
-            id="mobile-menu"
-            className="md:hidden px-4 pt-2 pb-4 space-y-2 border-t border-gray-300 dark:border-gray-700 mobile-menu-container nav-menu-mobile"
-            aria-label="Mobile navigation menu"
-            onClick={(e) => e.stopPropagation()} // Prevent clicks inside from closing the menu
-          >
+        <div 
+          id="mobile-menu"
+          className={cn(
+            "md:hidden overflow-hidden transition-all duration-200 ease-out mobile-menu-container",
+            mobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          )}
+          aria-label="Mobile navigation menu"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="px-4 pt-2 pb-4 space-y-1 border-t border-gray-300 dark:border-gray-700 nav-menu-mobile">
             <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target">
-              Learn Any Course GPT
+              className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
+              Learn Any Course GPT <ExternalLink className="h-3.5 w-3.5 opacity-50" />
             </a>
             <a href="https://learnanyskillgpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target">
-              Learn Any Skill GPT
+              className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
+              Learn Any Skill GPT <ExternalLink className="h-3.5 w-3.5 opacity-50" />
             </a>
             <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target">
-              College Degree GPT
+              className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
+              College Degree GPT <ExternalLink className="h-3.5 w-3.5 opacity-50" />
             </a>
             <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
-              className="block py-2 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target">
-              Talk to History GPT
+              className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
+              Talk to History GPT <ExternalLink className="h-3.5 w-3.5 opacity-50" />
             </a>
-            <Button size="sm" className="w-full rounded-full mt-2 py-1 h-9" asChild>
+            <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" 
+              className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
+              More AI Tools <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+            </a>
+            <Button size="sm" className="w-full rounded-full mt-2 py-1 h-10" asChild>
               <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer">
                 Get Started
               </a>
             </Button>
           </div>
-        )}
+        </div>
       </GlassMorphism>
     </div>
   );
