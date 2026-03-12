@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
               <span className="font-bold tracking-tight">Learn Any Course GPT</span>
             </div>
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-block mb-4 text-sm text-primary hover:text-primary/90 transition-colors font-medium"
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                 <a href="https://chatgpt.com/g/g-cUahkn19i-quiz-maker-ai" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Quiz Maker GPT</a>
               </li>
               <li className="pt-2">
-                <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer">
+                <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="sm" className="w-full">
                     MORE AI TOOLS
                   </Button>
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold mb-3 text-sm">Ai Web Tools LLC</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                   About Us
                 </a>
               </li>
