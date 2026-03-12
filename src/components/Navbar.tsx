@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
   }, [mobileMenuOpen]);
 
   return (
-    <div className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', isScrolled ? 'py-1' : 'py-2')}>
+    <div className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-200', isScrolled ? 'py-1' : 'py-2')}>
       <GlassMorphism intensity={isScrolled ? 'high' : 'low'} className={cn('mx-2 sm:mx-4 lg:mx-6 transition-all duration-300', isScrolled && 'shadow-lg')}>
         <div className="flex items-center justify-between px-3 sm:px-4 py-2">
           <div className="flex items-center gap-2 sm:gap-3">
