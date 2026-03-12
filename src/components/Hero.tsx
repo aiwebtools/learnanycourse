@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
             size="lg" 
             variant="outline" 
             className="rounded-full px-12 py-8 text-lg border-2 border-white/30 text-white hover:bg-white/20 font-bold backdrop-blur-xl transition-all duration-300 hover:scale-105"
-            onClick={() => window.open('https://www.aiwebtools.ai', '_blank')}
+            onClick={() => window.open('https://aiwebtools.lovable.app/?via=aiwebtools', '_blank')}
             aria-label="Explore more AI web tools"
           >
             Explore AI Web Tools

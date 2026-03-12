@@ -44,7 +44,7 @@ const CTA: React.FC = () => {
                 size="lg" 
                 variant="outline" 
                 className="rounded-full px-8 py-6 text-base w-full md:w-auto"
-                onClick={() => window.open('https://www.AiWebTools.Ai', '_blank')}
+                onClick={() => window.open('https://aiwebtools.lovable.app/?via=aiwebtools', '_blank')}
               >
                 Explore More AI Tools
               </Button>

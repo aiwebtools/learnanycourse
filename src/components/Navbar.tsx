@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
             </svg>
             <div className="flex flex-col">
               <span className="font-bold text-sm sm:text-base md:text-lg tracking-tight text-gray-900 dark:text-white">Learn Any Course GPT</span>
-              <a href="https://www.AiWebTools.Ai" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-700 dark:text-gray-300 hover:underline truncate max-w-[150px] sm:max-w-none">Presented by Ai Web Tools LLC</a>
+              <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-700 dark:text-gray-300 hover:underline truncate max-w-[150px] sm:max-w-none">Presented by Ai Web Tools LLC</a>
             </div>
           </div>
           
