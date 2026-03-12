@@ -79,11 +79,12 @@ const Navbar: React.FC = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-4">
-            <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">Learn Any Course GPT</a>
-            <a href="https://learnanyskillgpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">Learn Any Skill GPT</a>
-            <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">College Degree GPT</a>
-            <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-sm font-medium text-gray-900 dark:text-white">Talk to History GPT</a>
+          <nav className="hidden md:flex items-center space-x-3 lg:space-x-5 ml-4">
+            <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Learn Any Course GPT</a>
+            <a href="https://learnanyskillgpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Learn Any Skill GPT</a>
+            <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">College Degree GPT</a>
+            <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Talk to History GPT</a>
+            <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">More AI Tools</a>
           </nav>
           
           {/* Mobile menu button */}
