@@ -3,12 +3,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://learn-any-course-gpt.lovable.app/</loc>
+    <loc>https://learnanycourse.lovable.app/</loc>
     <lastmod>2025-01-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://learn-any-course-gpt.lovable.app/og-image.png</image:loc>
+      <image:loc>https://learnanycourse.lovable.app/og-image.png</image:loc>
       <image:title>Learn Any Course GPT - AI Learning Tools</image:title>
       <image:caption>AI-powered learning platform for mastering any course</image:caption>
     </image:image>
