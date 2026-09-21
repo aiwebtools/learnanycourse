@@ -212,7 +212,10 @@ function CourseMessage({ message }: { message: UIMessage }) {
 }
 
 export default function CourseTutorChat() {
-  const inputRef = useRef<HTMLTextAreaElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const focusInput = () => {
+    containerRef.current?.querySelector("textarea")?.focus();
+  };
   const initialMessages = useMemo(loadStoredMessages, []);
   const transport = useMemo(() => new DefaultChatTransport({
     api: `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/course-tutor`,
@@ -237,7 +240,7 @@ export default function CourseTutorChat() {
       toast.error(chatError.message || "The course tutor could not respond.");
     },
     onFinish: () => {
-      inputRef.current?.focus();
+      focusInput();
     },
   });
 
@@ -249,14 +252,14 @@ export default function CourseTutorChat() {
   }, [messages]);
 
   useEffect(() => {
-    inputRef.current?.focus();
+    focusInput();
   }, []);
 
   const resetCourse = () => {
     setMessages([welcomeMessage]);
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify([welcomeMessage]));
     clearError();
-    inputRef.current?.focus();
+    focusInput();
   };
 
   const submitText = async (text: string) => {
@@ -266,11 +269,11 @@ export default function CourseTutorChat() {
     }
 
     await sendMessage({ text: value });
-    inputRef.current?.focus();
+    focusInput();
   };
 
   return (
-    <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-card/80 shadow-2xl backdrop-blur-xl">
+    <div ref={containerRef} className="relative overflow-hidden rounded-2xl border border-white/15 bg-card/80 shadow-2xl backdrop-blur-xl">
       <div className="absolute inset-0 starry-background opacity-20" aria-hidden="true" />
       <div className="relative z-10 flex min-h-[680px] flex-col">
         <div className="flex flex-col gap-4 border-b border-border bg-background/80 p-4 sm:flex-row sm:items-center sm:justify-between">
@@ -346,7 +349,6 @@ export default function CourseTutorChat() {
             className="rounded-xl border-primary/20 bg-background/80 shadow-lg"
           >
             <PromptInputTextarea
-              ref={inputRef}
               placeholder="What course or degree would you like to learn?"
               className="min-h-20 text-base"
               disabled={isLoading}

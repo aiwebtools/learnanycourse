@@ -95,7 +95,7 @@ function extractTitle(html: string, videoId: string): string {
 
   return titleMatch[1]
     .replace(/\\u0026/g, "&")
-    .replace(/\\\"/g, '"')
+    .replace(/\\"/g, '"')
     .replace(/\\n/g, " ");
 }
 
