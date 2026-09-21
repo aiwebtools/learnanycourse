@@ -4,6 +4,9 @@ import { Button } from '@/components/ui/button';
 import GlassMorphism from './ui/GlassMorphism';
 import AnimatedSection from './AnimatedSection';
 
+const CHATGPT_VERSION_URL = 'https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt';
+const AIWEBTOOLS_URL = 'https://aiwebtools.lovable.app/?via=aiwebtools';
+
 const Hero: React.FC = () => {
   // Start with video automatically playing
   const [videoPlaying, setVideoPlaying] = useState(true);
@@ -51,22 +54,33 @@ const Hero: React.FC = () => {
           </div>
         </AnimatedSection>
         
-        <AnimatedSection animation="fade-in-up" delay={0.2} className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0">
+        <AnimatedSection animation="fade-in-up" delay={0.2} className="mt-8 md:mt-12 flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0">
           <Button 
             size="lg" 
             className="divine-button rounded-full px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg font-bold text-white hover:text-white transition-all duration-200 w-full sm:w-auto"
             asChild
             aria-label="Start learning with free AI tools"
           >
-            <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer">
-              Start Learning with Free AI Tools
+            <a href="#how-it-works">
+              Start Learning (INSITE version)
             </a>
           </Button>
           <Button 
             size="lg" 
             variant="outline" 
             className="rounded-full px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg border-2 border-white/30 text-white hover:bg-white/20 font-bold backdrop-blur-xl transition-all duration-200 hover:scale-105 w-full sm:w-auto"
-            onClick={() => window.open('https://aiwebtools.lovable.app/?via=aiwebtools', '_blank')}
+            asChild
+            aria-label="Open the ChatGPT version of Learn Any Course GPT"
+          >
+            <a href={CHATGPT_VERSION_URL} target="_blank" rel="noopener noreferrer">
+              Learn Any Course GPT (CHATGPT version)
+            </a>
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="rounded-full px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg border-2 border-white/30 text-white hover:bg-white/20 font-bold backdrop-blur-xl transition-all duration-200 hover:scale-105 w-full sm:w-auto"
+            onClick={() => window.open(AIWEBTOOLS_URL, '_blank')}
             aria-label="Explore more AI web tools"
           >
             Explore AI Web Tools

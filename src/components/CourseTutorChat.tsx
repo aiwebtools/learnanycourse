@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, isToolUIPart, type UIMessage } from "ai";
-import { AlertCircle, BookOpen, GraduationCap, RotateCcw } from "lucide-react";
+import { AlertCircle, BookOpen, ExternalLink, GraduationCap, RotateCcw } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,6 +31,7 @@ import {
 import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "learn-any-course-gpt-chat";
+const CHATGPT_VERSION_URL = "https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt";
 
 const welcomeMessage: UIMessage = {
   id: "learn-any-course-welcome",
@@ -96,6 +97,15 @@ function youtubeIdsFromText(text: string): string[] {
   }
 
   return [...ids].slice(0, 6);
+}
+
+function isCreditLimitError(error: Error | undefined): boolean {
+  if (!error?.message) {
+    return false;
+  }
+
+  const message = error.message.toLowerCase();
+  return message.includes("402") || message.includes("credit") || message.includes("credits") || message.includes("insufficient");
 }
 
 function YouTubeEmbeds({ text }: { text: string }) {
@@ -232,6 +242,7 @@ export default function CourseTutorChat() {
   });
 
   const isLoading = status === "submitted" || status === "streaming";
+  const showCreditFallback = isCreditLimitError(error);
 
   useEffect(() => {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
@@ -297,6 +308,19 @@ export default function CourseTutorChat() {
           <div className="mx-4 mb-3 flex items-start gap-2 rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive sm:mx-6">
             <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
             <span>{error.message || "The course tutor could not respond. Please try again."}</span>
+          </div>
+        )}
+
+        {showCreditFallback && (
+          <div className="mx-4 mb-3 rounded-xl border border-primary/30 bg-primary/10 p-4 text-sm text-foreground sm:mx-6">
+            <p className="font-semibold">Sorry, community credits have run out for today.</p>
+            <p className="mt-1 text-muted-foreground">Please try the Learn Any Course GPT (CHATGPT version) while the in-site version resets.</p>
+            <Button type="button" size="sm" className="mt-3 rounded-full" asChild>
+              <a href={CHATGPT_VERSION_URL} target="_blank" rel="noopener noreferrer">
+                Open Learn Any Course GPT (CHATGPT version)
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </Button>
           </div>
         )}
 

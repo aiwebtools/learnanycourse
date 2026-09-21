@@ -4,6 +4,9 @@ import { Button } from '@/components/ui/button';
 import AnimatedSection from './AnimatedSection';
 import GlassMorphism from './ui/GlassMorphism';
 
+const CHATGPT_VERSION_URL = 'https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt';
+const AIWEBTOOLS_URL = 'https://aiwebtools.lovable.app/?via=aiwebtools';
+
 const CTA: React.FC = () => {
   return (
     <section className="py-24 relative overflow-hidden">
@@ -15,7 +18,7 @@ const CTA: React.FC = () => {
         <Button 
           size="lg" 
           className="px-8 py-6 text-lg font-semibold bg-gray-800 hover:bg-gray-700 rounded-md shadow-lg transition-all"
-          onClick={() => window.open('https://aiwebtools.lovable.app/?via=aiwebtools', '_blank')}
+          onClick={() => window.open(AIWEBTOOLS_URL, '_blank')}
         >
           Explore AiWebTools.Ai
         </Button>
@@ -36,15 +39,23 @@ const CTA: React.FC = () => {
               <Button 
                 size="lg" 
                 className="rounded-full px-8 py-6 text-base w-full md:w-auto"
-                onClick={() => window.open('https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt', '_blank')}
+                asChild
               >
-                Start Learning Now
+                <a href="#how-it-works">Start Learning Now (INSITE version)</a>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="secondary"
+                className="rounded-full px-8 py-6 text-base w-full md:w-auto"
+                onClick={() => window.open(CHATGPT_VERSION_URL, '_blank')}
+              >
+                Learn Any Course GPT (CHATGPT version)
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="rounded-full px-8 py-6 text-base w-full md:w-auto"
-                onClick={() => window.open('https://aiwebtools.lovable.app/?via=aiwebtools', '_blank')}
+                onClick={() => window.open(AIWEBTOOLS_URL, '_blank')}
               >
                 Explore More AI Tools
               </Button>

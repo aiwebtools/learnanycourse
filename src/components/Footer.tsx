@@ -3,6 +3,12 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
+const CHATGPT_COURSE_URL = 'https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt';
+const QUIZ_MAKER_CHATGPT_URL = 'https://chatgpt.com/g/g-cUahkn19i-quiz-maker-ai';
+const SKILL_INSITE_URL = 'https://learnanyskillgpt.lovable.app/';
+const COLLEGE_INSITE_URL = 'https://college-degree-gpt.lovable.app/';
+const AIWEBTOOLS_URL = 'https://aiwebtools.lovable.app/?via=aiwebtools';
+
 const Footer: React.FC = () => {
   return <footer className="bg-secondary/30 py-12 border-t border-border">
       <div className="section-container py-0">
@@ -24,7 +30,7 @@ const Footer: React.FC = () => {
               <span className="font-bold tracking-tight">Learn Any Course GPT</span>
             </div>
             <a 
-              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
+              href={AIWEBTOOLS_URL} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-block mb-4 text-sm text-primary hover:text-primary/90 transition-colors font-medium"
@@ -40,25 +46,28 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold mb-3 text-sm">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://docs.google.com/document/d/1TpVG9pncULpkHy9IhAjyXIgScyTW703Lf-IQKkXeJs4/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Open Source College Degree GPT Prompt</a>
+                <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Course GPT (INSITE version)</a>
               </li>
               <li>
-                <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Course GPT</a>
+                <a href={CHATGPT_COURSE_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Course GPT (CHATGPT version)</a>
               </li>
               <li>
-                <a href="https://learnanyskillgpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Skill GPT</a>
+                <a href={SKILL_INSITE_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Learn Any Skill GPT (INSITE version)</a>
               </li>
               <li>
-                <a href="https://docs.google.com/document/d/1qtDKo3XN_EsspgrQD72Cpq2qh83H5xSd/edit?usp=sharing&ouid=116187507271950139405&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Ai Tools Free Downloadable List</a>
+                <a href={COLLEGE_INSITE_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">College Degree GPT (INSITE version)</a>
               </li>
               <li>
-                <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">College Degree GPT</a>
+                <a href="https://docs.google.com/document/d/1TpVG9pncULpkHy9IhAjyXIgScyTW703Lf-IQKkXeJs4/edit?tab=t.0" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Open Source College Degree GPT Prompt (DOCUMENT version)</a>
               </li>
               <li>
-                <a href="https://chatgpt.com/g/g-cUahkn19i-quiz-maker-ai" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Quiz Maker GPT</a>
+                <a href="https://docs.google.com/document/d/1qtDKo3XN_EsspgrQD72Cpq2qh83H5xSd/edit?usp=sharing&ouid=116187507271950139405&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Ai Tools Free Downloadable List (DOCUMENT version)</a>
+              </li>
+              <li>
+                <a href={QUIZ_MAKER_CHATGPT_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">Quiz Maker GPT (CHATGPT version)</a>
               </li>
               <li className="pt-2">
-                <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer">
+                <a href={AIWEBTOOLS_URL} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="sm" className="w-full">
                     MORE AI TOOLS
                   </Button>
@@ -71,7 +80,7 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold mb-3 text-sm">Ai Web Tools LLC</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href={AIWEBTOOLS_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                   About Us
                 </a>
               </li>
