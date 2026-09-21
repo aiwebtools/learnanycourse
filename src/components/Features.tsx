@@ -31,15 +31,15 @@ const Features: React.FC = () => {
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
           <span className="chip mb-3">Features</span>
-          <h2 className="heading text-3xl md:text-4xl mb-4 text-white">Your Complete Skill Learning Experience</h2>
+          <h2 className="heading text-3xl md:text-4xl mb-4 text-white">Your Complete Course Learning Experience</h2>
           <p className="subheading mx-auto text-gray-200">
-            Learn Any Skill GPT delivers comprehensive, personalized instruction combined with curated resources to help you master any skill.
+            Learn Any Course GPT delivers comprehensive, personalized instruction combined with curated resources to help you master any course.
           </p>
         </AnimatedSection>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           <Feature 
-            title="Comprehensive Skill Outlines" 
+            title="Comprehensive Course Outlines" 
             description="Meticulously structured learning paths taking you from absolute beginner to expert level mastery."
             delay={0.1}
             icon={
@@ -57,7 +57,7 @@ const Features: React.FC = () => {
           
           <Feature 
             title="Step-by-Step Instruction" 
-            description="Detailed lessons break down complex skills into manageable steps with clear explanations and examples."
+            description="Detailed lessons break down complex course topics into manageable steps with clear explanations and examples."
             delay={0.2}
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
@@ -98,7 +98,7 @@ const Features: React.FC = () => {
           
           <Feature 
             title="Sequential Learning Path" 
-            description="Progress through lessons in a logical order, building your skills progressively from foundations to advanced techniques."
+            description="Progress through lessons in a logical order, building your knowledge progressively from foundations to advanced concepts."
             delay={0.5}
             icon={
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">

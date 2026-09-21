@@ -3,7 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import GlassMorphism from './ui/GlassMorphism';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ExternalLink } from 'lucide-react';
+import { ExternalLink, Menu, X } from 'lucide-react';
+
+const CHATGPT_VERSION_URL = 'https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt';
+const SKILL_INSITE_URL = 'https://learnanyskillgpt.lovable.app/';
+const COLLEGE_INSITE_URL = 'https://college-degree-gpt.lovable.app/';
+const HISTORY_INSITE_URL = 'https://talk-to-history-gpt.lovable.app/';
+const AIWEBTOOLS_URL = 'https://aiwebtools.lovable.app/?via=aiwebtools';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,10 +23,13 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
   const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-    // Prevent body scrolling when mobile menu is open
-    document.body.style.overflow = mobileMenuOpen ? 'auto' : 'hidden';
+    setMobileMenuOpen((open) => !open);
   };
 
   // Close mobile menu when clicking outside
@@ -28,8 +37,7 @@ const Navbar: React.FC = () => {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (mobileMenuOpen && !target.closest('.mobile-menu-container') && !target.closest('.mobile-menu-button')) {
-        setMobileMenuOpen(false);
-        document.body.style.overflow = 'auto';
+        closeMobileMenu();
       }
     };
 
@@ -41,20 +49,19 @@ const Navbar: React.FC = () => {
     };
   }, [mobileMenuOpen]);
 
-  // Apply body overflow style based on mobile menu state
   useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : 'auto';
+
     return () => {
-      // Clean up overflow style on unmount
       document.body.style.overflow = 'auto';
     };
-  }, []);
+  }, [mobileMenuOpen]);
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && mobileMenuOpen) {
-        setMobileMenuOpen(false);
-        document.body.style.overflow = 'auto';
+        closeMobileMenu();
       }
     };
     
@@ -74,25 +81,26 @@ const Navbar: React.FC = () => {
             </svg>
             <div className="flex flex-col">
               <span className="font-bold text-sm sm:text-base md:text-lg tracking-tight text-gray-900 dark:text-white">Learn Any Course GPT</span>
-              <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-700 dark:text-gray-300 hover:underline truncate max-w-[150px] sm:max-w-none">Presented by Ai Web Tools LLC</a>
+              <a href={AIWEBTOOLS_URL} target="_blank" rel="noopener noreferrer" className="text-xs text-gray-700 dark:text-gray-300 hover:underline truncate max-w-[150px] sm:max-w-none">Presented by Ai Web Tools LLC</a>
             </div>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-3 lg:space-x-5 ml-4">
-            <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Learn Any Course GPT</a>
-            <a href="https://learnanyskillgpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Learn Any Skill GPT</a>
-            <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">College Degree GPT</a>
-            <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Talk to History GPT</a>
-            <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">More AI Tools</a>
+            <a href="#how-it-works" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Course GPT (INSITE version)</a>
+            <a href={CHATGPT_VERSION_URL} target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Course GPT (CHATGPT version)</a>
+            <a href={SKILL_INSITE_URL} target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">Skill GPT (INSITE version)</a>
+            <a href={COLLEGE_INSITE_URL} target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">College GPT (INSITE version)</a>
+            <a href={HISTORY_INSITE_URL} target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">History GPT (INSITE version)</a>
+            <a href={AIWEBTOOLS_URL} target="_blank" rel="noopener noreferrer" className="link-underline text-xs lg:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap">More AI Tools</a>
           </nav>
           
           {/* Mobile menu button */}
           <div className="flex items-center ml-auto md:ml-0">
             <div className="hidden md:block">
               <Button size="sm" className="rounded-full px-5 py-1 h-8" asChild>
-                <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer">
-                  Get Started
+                <a href="#how-it-works">
+                  Get Started (INSITE version)
                 </a>
               </Button>
             </div>
@@ -122,29 +130,33 @@ const Navbar: React.FC = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="px-4 pt-2 pb-4 space-y-1 border-t border-gray-300 dark:border-gray-700 nav-menu-mobile">
-            <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer" 
+            <a href="#how-it-works" onClick={closeMobileMenu}
               className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
-              Learn Any Course GPT <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+              Learn Any Course GPT (INSITE version)
             </a>
-            <a href="https://learnanyskillgpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
+            <a href={CHATGPT_VERSION_URL} target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}
               className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
-              Learn Any Skill GPT <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+              Learn Any Course GPT (CHATGPT version) <ExternalLink className="h-3.5 w-3.5 opacity-50" />
             </a>
-            <a href="https://college-degree-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
+            <a href={SKILL_INSITE_URL} target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}
               className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
-              College Degree GPT <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+              Learn Any Skill GPT (INSITE version) <ExternalLink className="h-3.5 w-3.5 opacity-50" />
             </a>
-            <a href="https://talk-to-history-gpt.lovable.app/" target="_blank" rel="noopener noreferrer" 
+            <a href={COLLEGE_INSITE_URL} target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}
               className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
-              Talk to History GPT <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+              College Degree GPT (INSITE version) <ExternalLink className="h-3.5 w-3.5 opacity-50" />
             </a>
-            <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" 
+            <a href={HISTORY_INSITE_URL} target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}
+              className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
+              Talk to History GPT (INSITE version) <ExternalLink className="h-3.5 w-3.5 opacity-50" />
+            </a>
+            <a href={AIWEBTOOLS_URL} target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}
               className="flex items-center justify-between py-3 text-sm font-medium text-gray-900 dark:text-white mobile-touch-target active:bg-white/10 rounded-lg px-2 transition-colors duration-100">
               More AI Tools <ExternalLink className="h-3.5 w-3.5 opacity-50" />
             </a>
             <Button size="sm" className="w-full rounded-full mt-2 py-1 h-10" asChild>
-              <a href="https://chatgpt.com/g/g-6730d59e8e648190be4221e319aad5cd-learn-any-course-gpt" target="_blank" rel="noopener noreferrer">
-                Get Started
+              <a href="#how-it-works" onClick={closeMobileMenu}>
+                Get Started (INSITE version)
               </a>
             </Button>
           </div>
