@@ -149,7 +149,7 @@ function ToolPartView({ part }: { part: Extract<UIMessage["parts"][number], { ty
 
   const toolTitle = part.type === "dynamic-tool"
     ? part.toolName
-    : part.type.replace(/^tool-/, "").replaceAll("_", " ");
+    : part.type.replace(/^tool-/, "").replace(/_/g, " ");
 
   return (
     <Tool defaultOpen={false} className="border-primary/20 bg-card/70">
